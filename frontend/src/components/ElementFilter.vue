@@ -96,4 +96,18 @@ export default {
         border: 1px solid black;
     }
 
+    @media (max-width: 708px) {
+      .filter{
+        display: flex;
+        flex-direction: column ;
+        align-items: flex-start;
+      }
+
+      .typing{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+    }
+
 </style>

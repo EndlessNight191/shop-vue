@@ -52,6 +52,7 @@ export default {
     .main{
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .s{

@@ -23,6 +23,8 @@ export default {
         this.$nextTick(function () {
             if(localStorage.array) {
               this.$store.state.elementBaskets = JSON.parse(localStorage.getItem('array'))
+            }else{
+              this.$store.state.elementBaskets.length = 0
             }
         })
     },
@@ -56,7 +58,6 @@ html body{
         min-height: 100vh;
         min-width: 90vw;
         display: flex;
-        align-items: center;
         justify-content: center;
     }
 
@@ -64,7 +65,7 @@ html body{
         margin: 2% 0px;
         padding: 2rem 2rem;
         min-height: 85vh;
-        min-width: 85vh;
+        min-width: 85vw;
         width: 90%;
         background-color: white;
         border-radius: 10px;
@@ -73,10 +74,11 @@ html body{
         font-family: 'Ubuntu', sans-serif;
     }
 
-@media (min-width: 400px) and (max-width: 1199px) {
+@media (min-width: 300px) and (max-width: 1199px) {
   .body__main{
     background-color: #d9c3c3;
-    width: 1000px;
+    margin: 0 auto;
+    width: 80%;
     height: 100%;
     min-height: 100vh;
     /*min-width: 90vw;*/
@@ -88,7 +90,6 @@ html body{
 
   .main__basket{
     font-size: 14px;
-    width: 400px;
   }
 }
 </style>

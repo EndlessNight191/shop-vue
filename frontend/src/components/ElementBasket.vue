@@ -1,10 +1,10 @@
 <template>
     <div class="body__main1">
         <div class="basket__one">
-            <img src="@/assets/pizzaElement.png" alt="">
+            <img src="@/assets/pizzaElement.png" alt="" class="img1">
             <div class="font" style="width: 200px">{{element.name}}</div>
         </div>
-        <div>
+        <div class="mobile__elementBasket">
             <button @click="minusCount" style="padding: 4px 12px 7px 12px" class="basket__btn font">-</button>
             <strong class="font">{{element.quantity}}</strong>
             <button @click="plusCount" class="basket__btn font ">+</button>
@@ -87,4 +87,34 @@ export default {
         font-size: 20px;
         margin: 5px;
     }
+
+    @media (min-width: 551px) and (max-width: 670px) {
+      .basket__one{
+        width: 35%;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .font{
+        font-size: 16px;
+      }
+
+      .mobile__elementBasket{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .body__main1{
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .basket__one{
+        width: 45%;
+      }
+
+    }
+
+
 </style>

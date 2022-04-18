@@ -2,14 +2,14 @@
     <div class="nav">
         <router-link to="/">
             <div class="header__element">
-                <img src="@/assets/pizza.svg" alt="pizza">
+                <img src="@/assets/pizza.svg" alt="pizza" class="img1">
                 <div>
                     <h1 class="h1">Vue Pizza</h1>
                     <h3 class="h2">интерактивная пицца с компонентным подходом</h3>
                 </div>
             </div>
         </router-link>
-        <router-link to="/MyAuthorization"><img src="@/assets/profile.svg" alt=""></router-link>
+        <router-link to="/MyAuthorization"><img src="@/assets/profile.svg" class="img2" alt=""></router-link>
         <router-link to="/MyBasket">
             <button class="nav__router">
                 <strong class="border">{{$store.getters.priceBasket}} Р</strong>
@@ -32,7 +32,7 @@ export default {
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid gray;
-        height: 15%;
+        padding: 0px 0px 1.5% 0px;
         width: 100%;
     }
 
@@ -86,5 +86,31 @@ export default {
         margin: 0px 0px 0px 15px;
         text-decoration: none;
         display: block;
+    }
+    
+    @media (max-width: 625px) {
+      .h1{
+        font-size: 25px;
+      }
+
+      .h2{
+        font-size: 17px;
+      }
+
+      .img1{
+        height: 50px;
+        width: 50px;
+      }
+
+      .img2{
+        height: 50px;
+        width: 50px;
+        margin-top: 15px;
+      }
+
+      .nav{
+        display: flex;
+        flex-wrap: wrap;
+      }
     }
 </style>

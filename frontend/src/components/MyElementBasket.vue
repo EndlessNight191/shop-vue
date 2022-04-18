@@ -10,7 +10,7 @@
         <footer class="footer">
             <div class="footer__body">
                 <div>Всего пицц: <strong style="color: purple">{{$store.getters.countBasket}} шт.</strong></div>
-                <div style="display: flex; justify-content: space-between; align-items: center;">Сумма заказа: <div style="margin-left: 10px; font-size: 26px; color: purple;">{{$store.getters.priceBasket}} ₽</div></div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">Сумма заказа: <div class="textTotalPriceBasket">{{$store.getters.priceBasket}} ₽</div></div>
             </div>
             <div class="footer__body">
                 <router-link to="/"><my-button>Вернуться назад</my-button></router-link> 
@@ -77,7 +77,7 @@ export default {
     .main__form__basket{
         width: 60%;
         background-color: white;
-      margin-top: 50px;
+        margin-top: 50px;
     }
 
     .header{
@@ -97,6 +97,26 @@ export default {
         margin-bottom: 4%;
         display: flex;
         justify-content: space-between;
+    }
+
+    .textTotalPriceBasket{
+      margin-left: 10px;
+      font-size: 26px;
+      color: purple;
+    }
+    
+    @media (max-width: 1050px) {
+      .main__form__basket{
+        width: 90%;
+      }
+
+      .textTotalPriceBasket{
+        font-size: 20px;
+      }
+
+      .clear__btn{
+        padding: 10px 15px;
+      }
     }
 
     .list-item {

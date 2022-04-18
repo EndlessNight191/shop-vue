@@ -80,4 +80,10 @@ export default {
         padding: 15px;
     }
 
+    @media (max-width: 900px){
+      .dialog__content{
+        width: 60%;
+      }
+    }
+
 </style>

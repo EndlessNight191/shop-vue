@@ -1,7 +1,7 @@
 <template>
     <div class="card">
         <img class='imgs' src="@/assets/pizzaElement.png" alt="">
-        <h3>{{post.name}}</h3>
+        <h3 style="text-align: center">{{post.name}}</h3>
         <strong>{{post.type}}</strong>
         <div class="card_bottom">
             <strong> От {{post.price}} ₽</strong>
@@ -34,15 +34,30 @@ export default {
     .card{
         width: 20%;
         height: 20%;
-        /*width: 270px;*/
-        /*height: 360px;*/
         margin: 10px 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 20px 10px;
         font-weight: 700;
         font-size: 20px;
+    }
+
+    @media (max-width: 650px){
+      .card{
+        width: 80%;
+      }
+    }
+
+    @media (max-width: 1000px) and (min-width: 601px) {
+      .card{
+        width: 40%;
+      }
+    }
+
+    @media (max-width: 1300px) and (min-width: 1001px) {
+      .card{
+        width: 28%;
+      }
     }
 
     .card_bottom{

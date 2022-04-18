@@ -27,8 +27,8 @@ export default {
     .mainBasket{
         display: flex;
         justify-content: center;
-        align-items: center;
         min-height: 500px;
+        width: 100%;
     }
 
 
@@ -41,7 +41,6 @@ export default {
 
     .fade-item {
       display: inline-block;
-      margin-right: 10px;
     }
     .fade-enter-active,
     .fade-leave-active {
@@ -52,20 +51,19 @@ export default {
     .fade-leave-to {
       position: absolute;
       opacity: 0;
+      transform: translateX(200px);
     }
 
     .list-item {
       display: inline-block;
-      margin-right: 10px;
     }
     .list-enter-active,
     .list-leave-active {
-      position: absolute;
       transition: all .8s ease;
     }
     .list-enter-from,
     .list-leave-to {
       opacity: 0;
-      position: absolute;
+      transform: translateX(200px);
     }
 </style>
