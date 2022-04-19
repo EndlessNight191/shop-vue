@@ -9,7 +9,7 @@ export default createStore({
             {id: 4, name: "Маргарита", price: 100, type: "Вегетарианская", quantity: 1, src: "@/assets/pizzaElement.png"},
             {id: 5, name: "Чизбургер-пицца", price: 200, type: "Сырная", quantity: 1, src: "@/assets/pizzaElement.png"},
             {id: 6, name: "Крэйзи пепперони", price: 100, type: "Мясная", quantity: 1, src: "@/assets/pizzaElement.png"},
-            {id: 7, name: "Четыре сезона", price: 100, type: "Мясная", quantity: 1, src: "@/assets/pizzaElement.png"},
+            {id: 7, name: "Двойной бекон", price: 100, type: "Мясная", quantity: 1, src: "@/assets/pizzaElement.png"},
             {id: 8, name: "Овощи и грибы", price: 100, type: "Вегетарианская", quantity: 1, src: "@/assets/pizzaElement.png"},
         ],
         options: [
